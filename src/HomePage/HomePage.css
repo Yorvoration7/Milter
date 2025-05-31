@@ -1,0 +1,9 @@
+.homepage {
+  padding-top: 64px; /* высота навигации */
+}
+
+.homepage-section{
+  min-height: 100vh;
+  padding: 40px 20px;
+  /* background: #f7f9fc; */
+} 
