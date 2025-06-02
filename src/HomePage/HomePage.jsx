@@ -1,19 +1,29 @@
 import React from 'react';
 import './HomePage.css';
+// Удаляем импорт productsData, т.к. HomePage будет получать его как prop
+// import productsData from '../data/products';
 import ProductCarousel from '../components/ProductCarousel/ProductCarousel.jsx';
 
-const HomePage = (products,activeLang ) => {
+// HomePage принимает массив продуктов и активный язык как props
+const HomePage = ({ products, activeLang }) => { // Правильный синтаксис для приема props
+
+  // Здесь у вас может быть другая логика или состояние для HomePage
+  // activeLang теперь приходит как prop от родителя
+
   return (
     <div className="homepage">
       <section id="products" className="homepage-section">
-        <h1>HomePage</h1>
-        <p>homr page</p>
-        <ProductCarousel
-        products={products }
-        activeLang={activeLang}
-        />
-        {/* Здесь можно добавить карточки продуктов или другой контент */}
+        <h1>Наша продукция</h1> {/* Можно локализовать этот заголовок на уровне выше и передать как prop */}
+
+        {/* Удаляем код, который пытался вывести продукты напрямую */}
+        {/* <p> ... </p> */}
+
+        {/* Передаем принятые props products и activeLang в дочерний компонент ProductCarousel */}
+        {/* Убедитесь, что у вас есть компонент, который рендерит HomePage и передает ему эти props */}
+        <ProductCarousel products={products} activeLang={activeLang} />
+
       </section>
+      {/* ... другие секции HomePage ... */}
     </div>
   );
 };

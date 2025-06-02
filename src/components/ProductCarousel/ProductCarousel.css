@@ -105,3 +105,46 @@
       width: 25px; /* Уменьшаем размер иконок стрелок на мобильных */
   }
 }
+
+
+/* sdfsajndofiunasdopfn */
+
+.product-carousel-container {
+  position: relative;
+  overflow: hidden; /* Скрыть переполнение */
+}
+
+.carousel-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.product-list {
+  display: flex;
+  transition: transform 0.5s ease; /* Плавный переход для смещения */
+}
+
+.product-item {
+  min-width: 25%; /* Показать 4 товара */
+  opacity: 0; /* Начальная непрозрачность */
+  transition: opacity 0.5s ease; /* Плавный переход для появления */
+}
+
+.fade-in {
+  opacity: 1; /* Установить непрозрачность на 1 для видимости */
+}
+
+.arrow {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.arrow img {
+  width: 30px; /* Размер стрелок */
+  height: auto;
+}
+
+
+
+/* sjdbnfoiqsbndfiasnodpfnaspdiuf */

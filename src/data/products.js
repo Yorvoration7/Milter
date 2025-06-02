@@ -6,7 +6,7 @@ const products = [
       uz: 'Mayonez',
       en: 'Mayonnaise'
     },
-    image: '../assets/images/webPics/product1.png'
+    image: '../../src/assets/images/product1.png'
   },
   {
     id: 2,
@@ -15,7 +15,7 @@ const products = [
       uz: 'Yog\'',
       en: 'Oil'
     },
-    image: '../assets/images/webPics/product2.png'
+    image: '../../src/assets/images/webPics/product2.png'
   },
   {
     id: 3,
@@ -24,7 +24,7 @@ const products = [
       uz: 'Spredlar',
       en: 'Spreads'
     },
-    image: '../assets/images/webPics/product3.png'
+   image: '../../src/assets/images/webPics/product3.png'
   },
   {
     id: 4,
@@ -33,7 +33,7 @@ const products = [
       uz: 'Chili souslari',
       en: 'Chili Sauces'
     },
-    image: '../assets/images/webPics/product4.png'
+   image: '../../src/assets/images/webPics/product4.png'
   },
   {
     id: 5,
@@ -42,7 +42,7 @@ const products = [
       uz: 'Quyultirilgan sut',
       en: 'Condensed Milk'
     },
-    image: '../assets/images/webPics/product5.png'
+     image: '../../src/assets/images/webPics/product5.png'
   },
   {
     id: 6,
@@ -51,7 +51,7 @@ const products = [
       uz: 'Varenka',
       en: 'Varenka'
     },
-    image: '../assets/images/webPics/product6.png'
+   image: '../../src/assets/images/webPics/product6.png'
   },
   {
     id: 7,
@@ -60,7 +60,7 @@ const products = [
       uz: 'Desert pastasi',
       en: 'Dessert Paste'
     },
-    image: '../assets/images/webPics/product7.png'
+   image: '../../src/assets/images/webPics/product7.png'
   },
   {
     id: 8,
@@ -69,7 +69,7 @@ const products = [
       uz: 'Iriska',
       en: 'Toffee'
     },
-    image: '../assets/images/webPics/product8.png'
+   image: '../../src/assets/images/webPics/product8.png'
   },
 ];
 
