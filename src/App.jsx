@@ -7,6 +7,7 @@ import About from './components/About/About.jsx';
 import Contacts from './components/Contacts/Contacts.jsx';
 import Footer from './components/Footer/Footer.jsx';
 import './App.css';
+import products from'./data/products.js';
 
 function App() {
   const [activeLang, setActiveLang] = useState('ru');
@@ -16,11 +17,14 @@ function App() {
       <Navigation activeLang={activeLang} setActiveLang={setActiveLang} />
       <div style={{ paddingTop: 64, minHeight: '80vh' }}>
         <Routes>
-          <Route path="/" element={<HomePage activeLang={activeLang} />} />
+          <Route path="/" element={<HomePage
+            products={products}
+            activeLang={activeLang} />} />
           <Route path="/products" element={<Products activeLang={activeLang} />} />
            <Route path="/about" element={<About activeLang={activeLang} />} />
           <Route path="/contacts" element={<Contacts activeLang={activeLang} />} />
         </Routes>
+        
       </div>
       <Footer />
     </Router>

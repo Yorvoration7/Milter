@@ -6,9 +6,6 @@ import technologyPic from '../../assets/images/webPics/technologypicture.png';
 
 const translations = {
   ru: {
-    goalTitle: 'Наша цель',
-    goalP1: 'Наша цель - предоставить потребителям высококачественные и вкусные продукты, которые соответствуют самым высоким стандартам Халяль.',
-    goalP2: 'Мы стремимся к постоянному развитию и инновациям в производстве, чтобы удовлетворить потребности и предпочтения наших клиентов.',
     title: 'О нас и о вас',
     q: 'Что для вас значит быть дома?',
     p1: 'В кругу родных усесться за стол, поджав под себя ноги.',
@@ -22,9 +19,6 @@ const translations = {
     technologyP3: 'Для Milter качество превыше всего, поэтому его контроль происходит на каждом из этапов производства.',
   },
   uz: {
-    goalTitle: 'Bizning maqsadimiz',
-    goalP1: 'Bizning maqsadimiz - iste\'molchilarni eng yuqori Halol standartlariga javob beradigan yuqori sifatli va mazali mahsulotlar bilan ta\'minlash.',
-    goalP2: 'Biz mijozlarimizning ehtiyojlari va xohishlarini qondirish uchun ishlab chiqarishda doimiy rivojlanish va innovatsiyalarga intilamiz.',
     title: 'Biz haqimizda va siz haqingizda',
     q: 'Siz uchun uyda bo\'lish nimani anglatadi?',
     p1: 'Oilangiz bilan stolga o\'tirish, oyog\'ingizni ostingizga olib.',
@@ -38,9 +32,6 @@ const translations = {
     technologyP3: 'Milter uchun sifat hamma narsadan ustundir, shuning uchun nazorat ishlab chiqarishning har bir bosqichida amalga oshiriladi.',
   },
   en: {
-    goalTitle: 'Our Goal',
-    goalP1: 'Our goal is to provide consumers with high-quality and delicious products that meet the highest Halal standards.',
-    goalP2: 'We strive for continuous development and innovation in production to meet the needs and preferences of our customers.',
     title: 'About us and you',
     q: 'What does being home mean to you?',
     p1: 'Sitting down at the table with your family, tucking your legs under you.',

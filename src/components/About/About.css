@@ -41,7 +41,7 @@ top: 597px;
 }
 
 .technology__text-content {
-  /* flex: 1; /* Allow text content to take available space */ */
+  /* flex: 1; /* Allow text content to take available space */ 
   padding-right: 40px; /* Add space between text and image */
   max-width: 450px; /* Set max width to prevent resizing */
 }
@@ -70,7 +70,7 @@ letter-spacing: 0%;
 text-align: left;
 }
 .aboutus__section{
-  /* width: 350px; /* Let flexbox handle width */ */
+  /* width: 350px; /* Let flexbox handle width */ 
   padding:0px 86px 46px 53px;
   max-width: 400px; /* Set max width to prevent resizing */
 }
@@ -115,7 +115,7 @@ text-align: left;
 
 .aboutUs__goal-text {
     /* Text specific styles if needed */
-    /* align-items: flex-end; /* Align text content to the right if needed */ */
+    /* align-items: flex-end; /* Align text content to the right if needed */ 
 }
 
 /* Active title style */

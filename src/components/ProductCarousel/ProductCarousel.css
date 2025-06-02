@@ -1,0 +1,107 @@
+
+
+.product-carousel-container {
+  margin: 40px auto;
+  max-width: 1280px; /* Ограничиваем ширину контейнера */
+  padding: 0 20px;
+  text-align: center;
+}
+
+.carousel-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Центрируем содержимое */
+  position: relative;
+}
+
+.product-list {
+  display: flex;
+  overflow: hidden; /* Скрываем продукты, которые не помещаются */
+  width: 100%; /* Позволяет занять доступное пространство */
+  justify-content: space-around; /* Распределяем продукты равномерно */
+  gap: 20px; /* Пространство между карточками продуктов */
+  transition: transform 0.5s ease; /* Добавляем плавный переход для сдвига */
+
+}
+
+
+
+.product-item {
+  flex: 0 0 auto; /* Предотвращает сжатие и растяжение */
+  width: calc(25% - 15px); /* Ширина для 4 элементов с учетом gap */
+  display: flex;
+  flex-direction: column; /* Элементы (изображение, текст) располагаются в колонку */
+  align-items: center; /* Выравниваем содержимое карточки по центру */
+  text-align: center; /* Центрируем текст под изображением */
+  /* Добавим рамку или фон, если нужно */
+  padding: 10px; /* Небольшой внутренний отступ */
+}
+
+.product-item img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px; /* Отступ между изображением и текстом */
+  /* Добавим border-radius, если углы карточек скругленные на дизайне */
+}
+
+.product-item p {
+    color: #333; /* Цвет текста названия продукта */
+    font-size: 16px; /* Размер шрифта */
+    margin: 0; /* Убираем стандартные margin у параграфа */
+}
+
+.arrow {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  /* Добавляем плавность для стрелок, если они меняют прозрачность или положение */
+  transition: opacity 0.3s ease;
+}
+
+.left-arrow {
+  left: 0;
+}
+
+.right-arrow {
+  right: 0;
+}
+
+.arrow img {
+    width: 30px; /* Размер иконок стрелок */
+    height: auto;
+}
+
+/* Стили для скрытия/отключения стрелок */
+.arrow:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .product-list {
+    justify-content: flex-start; /* Выравнивание по левому краю на маленьких экранах */
+    /* Убираем стили для горизонтального скролла и привязки */
+    /* overflow-x: auto; */
+    /* -webkit-overflow-scrolling: touch; */
+    /* scroll-snap-type: x mandatory; */
+  }
+
+  .product-item {
+    width: 70%; /* Отображаем больше на маленьких экранах, но не весь */
+    /* Убираем привязку */
+    /* scroll-snap-align: start; */
+  }
+
+  .arrow {
+      padding: 5px; /* Уменьшаем отступы стрелок на мобильных */
+  }
+
+  .arrow img {
+      width: 25px; /* Уменьшаем размер иконок стрелок на мобильных */
+  }
+}
