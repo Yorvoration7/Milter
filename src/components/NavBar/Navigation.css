@@ -6,6 +6,8 @@
   background: transparent !important;
   box-shadow: none !important;
   z-index: 1000;
+  background: #fff !important;
+  /* background-color: wh */
 }
 
 .navbar__container {
@@ -17,15 +19,7 @@
   padding: 0 32px;
   height: 64px;
 }
-.navbar__menu-products{
-  color: rgb(0, 0, 0);
-font-family: Inter;
-font-size: 14.6px;
-font-weight: 500;
-line-height: 18px;
-letter-spacing: 0%;
-text-align: left;
-}
+
 .navbar__logo {
   font-size: 2rem;
   font-weight: bold;
@@ -49,16 +43,26 @@ text-align: left;
 }
 
 .navbar__menu li a {
-  text-decoration: none;
-  color: #3a5ca8;
-  font-size: 1.1rem;
-  transition: color 0.2s;
-  white-space: nowrap;
-  font-family: 'Inter', Arial, sans-serif !important;
+  color: rgb(0, 0, 0);
+font-family: 'Inter'
+!important
+
+;
+font-size: 14.6px;
+font-weight: 500;
+line-height: 18px;
+letter-spacing: 0%;
+text-align: left;
 }
 
 .navbar__menu li a:hover {
   color: #007bff;
+}
+
+/* Active link style */
+.navbar__menu-link--active {
+    color: rgb(21, 150, 222) !important; /* Set color for active link */
+    font-weight: 700; /* Make active link bold */
 }
 
 .navbar__lang-switcher {
@@ -167,4 +171,12 @@ text-align: left;
   .navbar__lang-dropdown {
     min-width: 48px;
   }
-} 
+}
+
+/* 
+.navbar__menu li a,
+.navbar__lang-btn,
+.navbar__logo,
+.navbar__lang-dropdown .navbar__lang-btn {
+  font-family: 'Inter', Arial, sans-serif !important;
+}  */

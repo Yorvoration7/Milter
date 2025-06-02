@@ -1,27 +1,22 @@
+@import url('./assets/fonts/fonts.css');
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
 }
-@import url('./assets/fonts/fonts.css');
+
 body {
   min-height: 100vh;
   background: url('./assets/images/backG.png') center center fixed;
   background-size: cover;
   margin: 0;
   padding: 0;
-  font-family: 'Attractive', Arial, sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
-@font-face {
-  font-family: 'AttractiveCond';
-  src: url('./assets/fonts/ATTRACTIVECOND-MEDIUM.TTF') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
 
 body, h1, h2, h3, h4, h5, h6, p, a, button, input, textarea, li, span, div {
-  font-family: 'Attractive', 'Inter', Arial, sans-serif !important;
+  font-family: 'Inter', sans-serif !important;
 }
 

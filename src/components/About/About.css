@@ -1,0 +1,167 @@
+.aboutUs-section{
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  align-items: center;
+}
+.section-1-pic {
+  width: 100%; /* Задает ширину 100% от родительского контейнера */
+  height: auto; /* Сохраняет пропорции изображения */
+  display: block; /* Убирает пробелы под изображением */
+  object-fit: cover; /* Обеспечивает правильное обрезание изображения */
+  background-size: cover;
+}
+
+/* Section 2 Styles - "О нас и о вас" */
+.section-2{
+  display: flex;
+  align-items: center;
+  flex-direction: row; /* Image left, text right on larger screens */
+  justify-content: space-between; /* Push items to edges */
+  width: 100%; /* Allow section to take full width up to max-width */
+  max-width: 1280px; /* Set max width for the section */
+  padding: 0; /* Remove horizontal padding */
+}
+.aboutus__pic{
+width: 695px;
+height:500px;
+left: 6px;
+top: 597px;
+}
+
+/* New Technology Section Styles */
+.technology-section {
+  display: flex;
+  align-items: center;
+  flex-direction: row; /* Image left, text right on larger screens */
+  justify-content: space-between; /* Push items to edges */
+  width: 100%; /* Allow section to take full width up to max-width */
+  max-width: 1280px; /* Set max width for the section */
+  padding: 0; /* Remove horizontal padding */
+}
+
+.technology__text-content {
+  /* flex: 1; /* Allow text content to take available space */ */
+  padding-right: 40px; /* Add space between text and image */
+  max-width: 450px; /* Set max width to prevent resizing */
+}
+
+.technology__text-content h2 {
+  color: rgb(21, 150, 222);
+  margin-bottom: 20px;
+}
+.aboutus__section h2{
+  color: rgb(21, 150, 222);
+  font-family: Inter;
+  font-size: 27px;
+  font-weight: 600;
+  line-height: 34px;
+  letter-spacing: 0%;
+  text-align: left;
+
+}
+.aboutus__section p {
+  color: rgb(77, 124, 148);
+font-family: Inter;
+font-size: 15px;
+font-weight: 400;
+line-height: 20px;
+letter-spacing: 0%;
+text-align: left;
+}
+.aboutus__section{
+  /* width: 350px; /* Let flexbox handle width */ */
+  padding:0px 86px 46px 53px;
+  max-width: 400px; /* Set max width to prevent resizing */
+}
+.technology__text-content p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+  color: #333; /* Example color, adjust as needed */
+}
+
+.technology__image {
+  flex-shrink: 0; /* Prevent image from shrinking */
+}
+
+.technology__pic {
+  max-width: 695px;
+  height: 500px;
+  display: block;
+}
+
+/* Our Goal Section Styles */
+.aboutUs__goal-section {
+    display: flex;
+    flex-direction: row; /* Image left, text right */
+    align-items: center; /* Vertically center items */
+    margin: 50px auto; /* Add some vertical margin */
+    max-width: 1200px; /* Match max width of other sections */
+    width: 100%; /* Ensure it takes full width up to max-width */
+}
+
+.aboutUs__left-image {
+    flex-shrink: 0; /* Prevent image from shrinking */
+    /* Adjust width as needed */
+}
+
+.aboutUs__right-content {
+    flex: 1; /* Allow content to take up remaining space */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically center the content block */
+    padding-left: 40px; /* Add space between image and text */
+}
+
+.aboutUs__goal-text {
+    /* Text specific styles if needed */
+    /* align-items: flex-end; /* Align text content to the right if needed */ */
+}
+
+/* Active title style */
+.active-title {
+    color: rgb(21, 150, 222) !important; /* Use !important to ensure override */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .technology-section {
+      flex-direction: column; /* Stack text and image vertically */
+    }
+
+    .technology__text-content {
+      padding-right: 0; /* Remove right padding */
+      padding-bottom: 20px; /* Add bottom padding */
+      max-width: 100%; /* Allow full width on small screens */
+    }
+
+    .section-2 {
+        flex-direction: column; /* Stack items vertically on small screens */
+        align-items: center; /* Center items horizontally when stacked */
+    }
+
+    .aboutus__section {
+        margin-top: 20px; /* Add space between image and text */
+        width: 100%; /* Allow text to take full width */
+        max-width: 100%; /* Allow full width on small screens */
+        padding: 0 20px; /* Add horizontal padding on small screens */
+        text-align: center; /* Center text on small screens */
+    }
+
+    /* Our Goal Section Media Queries */
+    .aboutUs__goal-section {
+        flex-direction: column; /* Stack vertically on small screens */
+        align-items: center; /* Center items when stacked */
+    }
+
+    .aboutUs__right-content {
+        padding-left: 0; /* Remove left padding */
+        margin-top: 20px; /* Add space between image and text */
+        align-items: center; /* Center text content horizontally */
+        text-align: center; /* Center text */
+    }
+
+    .aboutUs__goal-text {
+        padding: 0 20px; /* Add horizontal padding on small screens */
+    }
+}

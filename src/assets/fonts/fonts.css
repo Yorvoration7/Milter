@@ -1,4 +1,8 @@
-
+@font-face {
+  font-family: 'Attractive';
+  src: url('../fonts/ATTRACTIVECOND-MEDIUM.TTF');
+  font-weight: 400;
+}
 
 @font-face {
   font-family: 'Inter';
