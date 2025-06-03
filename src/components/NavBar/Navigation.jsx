@@ -86,7 +86,7 @@ const Navigation = ({ activeLang, setActiveLang }) => {
               <button className="navbar__lang-btn" onClick={() => { setActiveLang('ru'); setOpen(false); }} type="button">Ру</button>
             )}
             {activeLang !== 'uz' && (
-              <button className="navbar__lang-btn" onClick={() => { setActiveLang('uz'); setOpen(false); }} type="button">Уz</button>
+              <button className="navbar__lang-btn" onClick={() => { setActiveLang('uz'); setOpen(false); }} type="button">Uz</button>
             )}
             {activeLang !== 'en' && (
               <button className="navbar__lang-btn" onClick={() => { setActiveLang('en'); setOpen(false); }} type="button">En</button>

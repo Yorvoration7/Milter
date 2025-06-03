@@ -5,6 +5,9 @@
   max-width: 1280px; /* Ограничиваем ширину контейнера */
   padding: 0 20px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+align-items: center;
 }
 
 .carousel-wrapper {
@@ -12,14 +15,12 @@
   align-items: center;
   justify-content: center; /* Центрируем содержимое */
   position: relative;
+  width: 100%;
 }
 
 .product-list {
   display: flex;
-  overflow: hidden; /* Скрываем продукты, которые не помещаются */
-  width: 100%; /* Позволяет занять доступное пространство */
   justify-content: space-around; /* Распределяем продукты равномерно */
-  gap: 20px; /* Пространство между карточками продуктов */
   transition: transform 0.5s ease; /* Добавляем плавный переход для сдвига */
 
 }
@@ -34,20 +35,28 @@
   align-items: center; /* Выравниваем содержимое карточки по центру */
   text-align: center; /* Центрируем текст под изображением */
   /* Добавим рамку или фон, если нужно */
-  padding: 10px; /* Небольшой внутренний отступ */
+  /* padding: 10px;  */
+  transition: transform 0.3s ease;
 }
-
+.product-item:hover{
+  transform: scale(1.03);
+  
+}
 .product-item img {
-  max-width: 100%;
-  height: auto;
+  max-width: 250px;
+  height: 220px
   margin-bottom: 10px; /* Отступ между изображением и текстом */
   /* Добавим border-radius, если углы карточек скругленные на дизайне */
 }
 
 .product-item p {
-    color: #333; /* Цвет текста названия продукта */
-    font-size: 16px; /* Размер шрифта */
-    margin: 0; /* Убираем стандартные margin у параграфа */
+  color: rgb(69, 120, 144);
+  font-family: Inter;
+  font-size: 19px;
+  font-weight: 500;
+  line-height: 21px;
+  letter-spacing: 0%;
+  text-align: left;
 }
 
 .arrow {
@@ -65,10 +74,12 @@
 
 .left-arrow {
   left: 0;
+  padding: 25px;
 }
 
 .right-arrow {
   right: 0;
+  padding: 25px;
 }
 
 .arrow img {
@@ -109,42 +120,39 @@
 
 /* sdfsajndofiunasdopfn */
 
-.product-carousel-container {
-  position: relative;
-  overflow: hidden; /* Скрыть переполнение */
-}
-
-.carousel-wrapper {
+.card-container {
   display: flex;
-  align-items: center;
+  flex-wrap: wrap; /* Позволяет карточкам обтекать */
+  justify-content: space-between; /* Распределяет карточки равномерно */
+  gap: 20px; /* Расстояние между карточками */
+  padding: 20px; /* Внутренние отступы контейнера */
 }
 
-.product-list {
-  display: flex;
-  transition: transform 0.5s ease; /* Плавный переход для смещения */
+.card {
+  position: relative; /* Для абсолютного позиционирования внутренних элементов */
+  width: 216px; /* Ширина карточки */
+  height: 198px; /* Высота карточки */
+  background-color: #f0f0f0; /* Цвет фона карточки (вы можете изменить) */
+  border: 1px solid #ccc; /* Граница карточки */
+  border-radius: 8px; /* Скругление углов */
+  overflow: hidden; /* Скрывает элементы, выходящие за пределы карточки */
 }
 
-.product-item {
-  min-width: 25%; /* Показать 4 товара */
-  opacity: 0; /* Начальная непрозрачность */
-  transition: opacity 0.5s ease; /* Плавный переход для появления */
-}
-
-.fade-in {
-  opacity: 1; /* Установить непрозрачность на 1 для видимости */
-}
-
-.arrow {
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-.arrow img {
-  width: 30px; /* Размер стрелок */
-  height: auto;
+.card img {
+  width: 100%; /* Изображение занимает всю ширину карточки */
+  height: auto; /* Автоматическая высота для сохранения пропорций */
 }
 
 
 
 /* sjdbnfoiqsbndfiasnodpfnaspdiuf */
+
+.our__products{
+  color: rgb(19, 149, 221);
+font-family: Inter;
+font-size: 51.8px;
+font-weight: 600;
+line-height: 63px;
+letter-spacing: 0%;
+text-align: left;
+}

@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navigation from './components/NavBar/Navigation.jsx';
 import HomePage from './HomePage/HomePage.jsx';
 import Products from './components/Products/Products.jsx';
+import Product from './components/Product/Product.jsx';
 import About from './components/About/About.jsx';
 import Contacts from './components/Contacts/Contacts.jsx';
 import Footer from './components/Footer/Footer.jsx';
@@ -21,6 +22,8 @@ function App() {
             products={products}
             activeLang={activeLang} />} />
           <Route path="/products" element={<Products activeLang={activeLang} />} />
+          <Route path="/product/:id"element={<Product activeLang={activeLang} />} />
+         
            <Route path="/about" element={<About activeLang={activeLang} />} />
           <Route path="/contacts" element={<Contacts activeLang={activeLang} />} />
         </Routes>

@@ -1,9 +1,16 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom'; // Импортируем Link для навигации
 import './ProductCarousel.css'; // Создайте этот CSS файл для стилей
 import leftArrowIcon from '../../assets/images/webPics/arrowleft.png';
+import Slider from 'react-slick';
 import rightArrowIcon from '../../assets/images/webPics/arrowright.png';
 import productsData from '../../data/products'; // Импортируем данные о продуктах
-console.log(productsData);
+
+const translations = {
+  ru: 'Наша продукция',
+  uz: 'Mahsulotlarimiz',
+  en: 'Our Products',
+};
 
 const ProductCarousel = ({ activeLang }) => {
   const products = productsData; // Используем импортированные данные
@@ -28,32 +35,25 @@ const ProductCarousel = ({ activeLang }) => {
   });
 
   return (
-    <>
-
-     <div className="product-carousel-container">
-      <h2>Наша продукция</h2>
+    <div className="product-carousel-container">
+      <h1 className="our__products">{translations[activeLang]}</h1>
       <div className="carousel-wrapper">
         <button onClick={prevSet} className="arrow left-arrow">
           <img src={leftArrowIcon} alt="Previous" />
         </button>
         <div className="product-list">
           {displayedProducts.map((product) => (
-            <div key={product.id} className="product-item fade-in">
+            <Link to={`/product/${product.id}`} key={product.id} className="product-item fade-in">
               <img src={product.image} alt={product.name[activeLang]} />
-              <p>{product.name[activeLang]}</p>
-            </div>
+              <p className="product-title">{product.name[activeLang]}</p>
+            </Link>
           ))}
         </div>
         <button onClick={nextSet} className="arrow right-arrow">
           <img src={rightArrowIcon} alt="Next" />
         </button>
-        
       </div>
-      
-    </div> 
-
-   
-    </>
+    </div>
   );
 };
 
