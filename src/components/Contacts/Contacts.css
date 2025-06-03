@@ -1,0 +1,206 @@
+/* src/components/Contacts/Contacts.css */
+
+.contacts-container {
+    /* padding: 40px 20px;  */
+    max-width: 1280px; /* Ограничиваем ширину контента */
+    margin: 0 auto; /* Выравниваем по центру */
+}
+
+.contact-section {
+    display: flex; /* Размещаем изображение и форму в одной строке */
+    gap: 53px; /* Отступ между изображением и формой */
+    align-items: center; /* Выравниваем элементы по центру вертикали */
+    margin-bottom: 60px; /* Отступ перед следующей секцией */
+    flex-wrap: wrap; /* Переносим элементы на новую строку на маленьких экранах */
+    justify-content: space-between
+}
+
+.contact-image {
+    flex: 1; /* Изображение занимает доступное место */
+    min-width: 300px; /* Минимальная ширина изображения */
+    max-width: 500px; /* Максимальная ширина изображения */
+}
+
+.contact-girl-image {
+    max-width: 700px;/* Изображение не будет выходить за пределы своего контейнера */
+    height: auto; /* Сохраняем пропорции */
+    /* border-radius: 8px;  */
+}
+
+.contact-form-container {
+    flex: 1; /* Форма занимает доступное место */
+    min-width: 300px; /* Минимальная ширина формы */
+    max-width: 500px; /* Максимальная ширина формы */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.email__phone{
+  display: flex;
+}
+/* Стили для заголовка СВЯЖИТЕСЬ С НАМИ */
+.contact-title {
+    color: rgb(26, 152, 222);
+    font-family: Inter;
+    font-size: 26.3px;
+    font-weight: 600;
+    line-height: 32px;
+    letter-spacing: 0%;
+    text-align: left;
+    margin-bottom: 20px; /* Сохраняем отступ после заголовка */
+}
+
+/* Стили для описания формы */
+.contact-description {
+    /* width: 244px; /* Ширина описания - может потребовать корректировки в зависимости от макета */
+    /* height: 38px; /* Высота описания - не всегда применима для текста */
+    /* position, left, top - НЕ ИСПОЛЬЗУЕМ для сохранения адаптивности */
+    /* display: flex; */
+    /* flex-direction: row; */
+    /* align-items: center; */
+    font-size: 1rem; /* Размер шрифта описания */
+    color: #555; /* Цвет текста описания */
+    white-space: pre-wrap; /* Сохраняем переносы строк из кода */
+    margin-bottom: 20px; /* Сохраняем отступ после описания */
+    /* text-align: left; /* Может потребоваться, если текст не выравнивается по левому краю по умолчанию */
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="tel"],
+.contact-form textarea {
+    width: 100%; /* Поля ввода и текстовая область занимают всю доступную ширину */
+    padding: 12px 15px; /* Внутренние отступы в полях */
+    margin-bottom: 15px; /* Отступ между полями */
+    border: 1px solid #ccc; /* Рамка полей */
+    border-radius: 25px; /* Сильное скругление углов полей */
+    background-color: #f9f9f9; /* Светлый фон полей */
+    box-sizing: border-box; /* Учитываем padding и border в общей ширине */
+}
+
+.contact-form textarea {
+    min-height: 120px; /* Минимальная высота текстовой области */
+    resize: vertical; /* Разрешаем изменять размер только по вертикали */
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #888; /* Цвет текста плейсхолдера */
+}
+
+.send-button {
+    display: block; /* Кнопка как блочный элемент */
+    width: 100%; /* Кнопка занимает всю доступную ширину */
+    padding: 12px 20px; /* Внутренние отступы кнопки */
+    background: linear-gradient(to right, #007bff, #00c6ff); /* Синий градиент */
+    color: white; /* Белый текст на кнопке */
+    border: none; /* Убираем стандартную рамку */
+    border-radius: 25px; /* Сильное скругление углов кнопки */
+    cursor: pointer; /* Курсор в виде указателя */
+    font-size: 1rem; /* Размер шрифта кнопки */
+    transition: background 0.3s ease; /* Плавный переход при наведении */
+}
+
+.send-button:hover {
+    background: linear-gradient(to right, #0056b3, #0099cc); /* Изменение градиента при наведении */
+}
+/* Медиа-запрос для маленьких экранов */
+/* Медиа-запрос для маленьких экранов *//* Медиа-запрос для маленьких экранов */ /* Медиа-запрос для маленьких экранов */
+/* Медиа-запрос для маленьких экранов */
+/* Медиа-запрос для маленьких экранов */
+/* Медиа-запрос для маленьких экранов */
+/* Медиа-запрос для маленьких экранов *//* Медиа-запрос для маленьких экранов */
+/* Медиа-запрос для маленьких экранов */
+/* Медиа-запрос для маленьких экранов */
+/* Медиа-запрос для маленьких экранов */
+.distributor-section {
+    text-align: center; /* Выравниваем содержимое по центру */
+    margin-top: 60px; /* Отступ сверху */
+}
+
+.distributor-section h2 {
+    color: #007bff; /* Синий цвет заголовка */
+    margin-bottom: 20px; /* Отступ после заголовка */
+}
+
+.branches-button {
+    display: inline-block; /* Кнопка как строчно-блочный элемент */
+    padding: 12px 30px; /* Внутренние отступы кнопки */
+    background: linear-gradient(to right, #00c6ff, #007bff); /* Синий градиент */
+    color: white; /* Белый текст */
+    border: none; /* Без рамки */
+    border-radius: 25px; /* Сильное скругление углов */
+    cursor: pointer; /* Курсор в виде указателя */
+    font-size: 1rem; /* Размер шрифта */
+    text-decoration: none; /* Убираем подчеркивание для ссылок, если это ссылка */
+    transition: background 0.3s ease, transform 0.2s ease; /* Плавный переход */
+    margin-bottom: 20px; /* Отступ под кнопкой перед списком */
+}
+
+.branches-button:hover {
+    background: linear-gradient(to right, #0099cc, #0056b3); /* Изменение градиента при наведении */
+    transform: scale(1.05); /* Увеличение кнопки при наведении */
+}
+
+.distributor-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Выравниваем элементы списка по центру */
+    overflow: hidden; /* Скрываем содержимое, которое выходит за пределы max-height */
+    max-height: 0; /* Изначально скрываем список */
+    opacity: 0; /* Изначально делаем прозрачным */
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out; /* Плавный переход */
+}
+
+.distributor-list.visible {
+    max-height: 500px; /* Устанавливаем достаточную высоту для отображения всего содержимого */
+    opacity: 1; /* Делаем видимым */
+}
+
+.distributor-item {
+    width: 100%; /* Элемент занимает всю доступную ширину родительского контейнера */
+    max-width: 300px; /* Максимальная ширина элемента, можно настроить */
+    padding: 12px 20px; /* Внутренние отступы */
+    margin-bottom: 10px; /* Отступ между элементами списка */
+    border: 1px solid #ccc; /* Рамка */
+    border-radius: 25px; /* Скругление углов */
+    background-color: #fff; /* Белый фон */
+    text-align: center; /* Выравнивание текста по центру */
+    cursor: pointer; /* Курсор в виде указателя */
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease; /* Плавный переход при наведении */
+}
+
+.distributor-item:hover {
+    border-color: #007bff; /* Изменение цвета рамки при наведении */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3); /* Тень при наведении */
+    transform: scale(1.02); /* Легкое увеличение при наведении */
+}
+/* Медиа-запрос для маленьких экранов */
+/* Медиа-запрос для маленьких экранов *//* Медиа-запрос для маленьких экранов */ /* Медиа-запрос для маленьких экранов */
+/* Медиа-запрос для маленьких экранов */
+/* Медиа-запрос для маленьких экранов */
+/* Медиа-запрос для маленьких экранов */
+/* Медиа-запрос для маленьких экранов *//* Медиа-запрос для маленьких экранов */
+/* Медиа-запрос для маленьких экранов */
+/* Медиа-запрос для маленьких экранов */
+/* Медиа-запрос для маленьких экранов */
+@media (max-width: 768px) {
+    .contact-section {
+        flex-direction: column; /* На маленьких экранах располагаем элементы в столбец */
+        gap: 30px; /* Уменьшаем отступ */
+    }
+
+    .contact-image,
+    .contact-form-container {
+        width: 100%; /* Элементы занимают всю ширину */
+        max-width: none; /* Убираем ограничение максимальной ширины */
+    }
+
+    .contacts-container {
+        padding: 20px; /* Уменьшаем отступы на маленьких экранах */
+    }
+
+    .distributor-item {
+        max-width: none; /* Убираем ограничение ширины элемента списка на маленьких экранах */
+    }
+}
