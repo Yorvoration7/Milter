@@ -1,5 +1,7 @@
 import React, { useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
+import { ToastContainer, toast, Bounce } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import './Contacts.css'; // Создадим этот CSS файл позже для стилей
 import girlCompImage from '../../assets/images/webPics/girlcomp.png';
 
@@ -79,23 +81,37 @@ const Contacts = ({ activeLang = 'ru' }) => { // Устанавливаем ру
   const sendEmail = (e) => {
     e.preventDefault(); // Предотвращаем стандартную отправку формы
 
-    emailjs.sendForm('service_adb0hey',
-      
-      'template_guy5elk', form.current, {
-      publicKey: 'Tj_S8QANNuVYsaM0X',
-    })
+    emailjs.sendForm('service_f5i02rd', 'template_v72hzb9', form.current, 'n6AZ23nt5fvy0lFmP')
       .then(
         () => {
           console.log('SUCCESS!');
-          alert(translations[activeLang].successMessage); // Оповещение об успехе
-          if (form.current) { // Проверяем, что ссылка на форму существует
-            form.current.reset(); // Очищаем форму после успешной отправки
+          if (form.current) {
+            form.current.reset();
           }
+          toast.success('Заявка принята ✅', {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: false,
+            pauseOnHover: true,
+            draggable: true,
+            theme: "light",
+            transition: Bounce,
+          });
         },
         (error) => {
           console.log('FAILED...', error.text);
-          alert(`${translations[activeLang].failMessage}: ${error.text}`); // Оповещение об ошибке
-        },
+          toast.error('Попробуйте заново ❌', {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: false,
+            pauseOnHover: true,
+            draggable: true,
+            theme: "light",
+            transition: Bounce,
+          });
+        }
       );
   };
 
@@ -141,6 +157,7 @@ const Contacts = ({ activeLang = 'ru' }) => { // Устанавливаем ру
           </div>
         )}
       </div>
+      <ToastContainer />
     </div>
   );
 };

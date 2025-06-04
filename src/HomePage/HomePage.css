@@ -7,3 +7,145 @@
   /* padding: 40px 20px; */
   /* background: #f7f9fc; */
 } 
+
+/* Styles for the selected product details section */
+.selected-product-details {
+    padding: 40px 20px; /* Отступы вокруг секции */
+    max-width: 1280px; /* Ограничение максимальной ширины */
+    margin: 40px auto; /* Отступ сверху и центрирование */
+    border-top: 1px solid #eee; /* Разделительная линия сверху */
+    background-color: #f9f9f9; /* Легкий фон секции */
+    border-radius: 8px; /* Скругление углов */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Легкая тень */
+}
+
+.product-details {
+    display: flex; /* Используем Flexbox для расположения изображения и текста */
+    gap: 40px; /* Отступ между изображением и текстом */
+    align-items: flex-start; /* Выравнивание элементов по верху */
+    flex-wrap: wrap; /* Перенос элементов на новую строку на маленьких экранах */
+}
+
+.product-details img {
+    max-width: 300px; /* Максимальная ширина изображения */
+    height: auto; /* Сохранение пропорций */
+    border-radius: 8px; /* Небольшое скругление углов изображения */
+    flex-shrink: 0; /* Запрещаем изображению сжиматься */
+    object-fit: contain; /* Масштабируем изображение, сохраняя пропорции */
+}
+
+.product-info {
+    flex-grow: 1; /* Разрешаем блоку с информацией занимать оставшееся место */
+}
+
+.product-details h2 {
+    font-size: 28px; /* Увеличиваем размер шрифта заголовка */
+    color: #1a98de; /* Синий цвет заголовка */
+    margin-top: 0; /* Убираем верхний отступ у заголовка */
+    margin-bottom: 15px; /* Увеличиваем отступ снизу заголовка */
+}
+
+.product-info p {
+    font-size: 16px; /* Размер шрифта текста */
+    color: #555; /* Цвет текста */
+    line-height: 1.6; /* Межстрочный интервал */
+    margin-bottom: 20px; /* Отступ под описанием */
+}
+
+/* Styles for variations */
+.product-variations {
+    margin-bottom: 20px; /* Отступ под блоком вариантов */
+}
+
+.variation-list {
+    display: flex; /* Располагаем кнопки вариантов в ряд */
+    gap: 10px; /* Отступ между кнопками */
+    flex-wrap: wrap; /* Перенос на новую строку */
+}
+
+.variation-item {
+    padding: 8px 15px; /* Внутренние отступы кнопки */
+    border: 1px solid #ccc; /* Рамка кнопки */
+    border-radius: 20px; /* Скругление углов */
+    background-color: #fff; /* Белый фон */
+    cursor: pointer; /* Курсор */
+    font-size: 14px; /* Размер шрифта */
+    transition: background-color 0.3s ease, border-color 0.3s ease; /* Плавный переход */
+}
+
+.variation-item:hover {
+    background-color: #e9e9e9; /* Легкое изменение фона при наведении */
+    border-color: #b0b0b0; /* Изменение цвета рамки */
+}
+
+.variation-item.active {
+    background-color: #1a98de; /* Синий фон для активного варианта */
+    color: white; /* Белый текст */
+    border-color: #1a98de; /* Синяя рамка */
+    font-weight: bold; /* Жирный текст */
+}
+
+/* Styles for nutritional info */
+.nutritional-info {
+    margin-top: 20px; /* Отступ сверху */
+    padding-top: 15px; /* Внутренний отступ сверху */
+    border-top: 1px dashed #ccc; /* Разделительная линия */
+}
+
+.nutritional-info h4 {
+    font-size: 18px; /* Размер шрифта заголовка */
+    color: #333; /* Цвет заголовка */
+    margin-top: 0; /* Убираем верхний отступ */
+    margin-bottom: 10px; /* Отступ снизу */
+}
+
+.nutritional-info ul {
+    list-style: none; /* Убираем маркеры списка */
+    padding: 0; /* Убираем внутренний отступ */
+}
+
+.nutritional-info li {
+    margin-bottom: 5px; /* Отступ между пунктами списка */
+    font-size: 15px; /* Размер шрифта */
+    color: #666; /* Цвет текста */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .product-details {
+        flex-direction: column; /* На маленьких экранах располагаем элементы в столбец */
+        align-items: center; /* Центрируем элементы в столбце */
+        gap: 20px; /* Уменьшаем отступ */
+    }
+
+    .product-details img {
+        max-width: 150px; /* Уменьшаем максимальную ширину изображения на маленьких экранах */
+        /* margin-bottom уже есть в общем правиле для img */
+    }
+
+    .selected-product-details {
+        padding: 20px; /* Уменьшаем отступы */
+        margin: 20px auto; /* Уменьшаем отступ сверху */
+    }
+
+    .product-details h2 {
+        text-align: center; /* Центрируем заголовок */
+    }
+
+    .product-info p {
+        text-align: center; /* Центрируем описание */
+    }
+
+    .variation-list {
+        justify-content: center; /* Центрируем кнопки вариантов */
+    }
+
+    .nutritional-info {
+        text-align: center; /* Центрируем информацию о пищевой ценности */
+    }
+
+    .nutritional-info ul {
+        text-align: left; /* Выравниваем пункты списка влево, если контейнер центрирован */
+        display: inline-block; /* Делаем список строчно-блочным для центрирования */
+    }
+} 

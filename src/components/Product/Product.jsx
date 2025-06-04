@@ -12,6 +12,10 @@ const Product = () => {
 
   return (
     <div>
+      <p>
+
+        sdfsdf
+      </p>
       <h1>{product.name.ru}</h1> {/* Динамически отображаем информацию о товаре */}
       <img src={product.image} alt={product.name.ru} />
       <p>{product.name.ru}</p> {/* Можно добавить описание */}
