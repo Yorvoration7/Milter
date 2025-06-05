@@ -1,5 +1,3 @@
-
-
 .product-carousel-container {
   /* margin: 40px auto; */
   max-width: 1280px; /* Ограничиваем ширину контейнера */
@@ -44,7 +42,7 @@ align-items: center;
 }
 .product-item img {
   max-width: 250px;
-  height: 220px
+  height: 220px;
   margin-bottom: 10px; /* Отступ между изображением и текстом */
   /* Добавим border-radius, если углы карточек скругленные на дизайне */
 }
@@ -146,7 +144,12 @@ align-items: center;
 
 
 /* sjdbnfoiqsbndfiasnodpfnaspdiuf */
-
+.product-variations{
+display: flex;
+align-items: center;
+flex-direction: column;
+align-items: center;
+}
 .our__products{
   color: rgb(19, 149, 221);
 font-family: Inter;
@@ -155,4 +158,98 @@ font-weight: 600;
 line-height: 63px;
 letter-spacing: 0%;
 text-align: left;
+}
+
+/* Styles for variation navigation buttons and container */
+.variation-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Центрируем содержимое по горизонтали */
+  gap: 10px; /* Adjust space between buttons and text if needed */
+  width: 235px !important; /* Устанавливаем СТРОГО фиксированную ширину */
+  height: 28px !important; /* Устанавливаем СТРОГО фиксированную высоту */
+  /* Возможно, здесь уже есть другие стили, сохраните их, если они нужны */
+}
+
+.variation-arrow {
+  background: none; /* Убираем фон */
+  border: none; /* Убираем границу */
+  padding: 0; /* Убираем внутренние отступы */
+  cursor: pointer; /* Указываем, что это интерактивный элемент */
+  display: flex; /* Используем flexbox для центрирования иконки */
+  align-items: center; /* Центрируем иконку по вертикали */
+  justify-content: center; /* Центрируем иконку по горизонтали */
+  flex-shrink: 0; /* Запрещаем стрелкам сжиматься */
+}
+
+.variation-arrow:disabled {
+  /* opacity: 0.5; */ /* Убедитесь, что эта строка удалена или закомментирована */
+  cursor: not-allowed;
+}
+
+.variation-arrow img {
+  width: 30px; /* Задаем ширину изображения стрелки */
+  height: 25px; /* Задаем высоту изображения стрелки */
+  display: block; /* Убедимся, что img является блочным элементом */
+}
+
+.current-variation-name {
+  /* Existing styles for the variation name text */
+  /* ... */
+  flex-grow: 1; /* Позволяем названию варианта занимать доступное пространство */
+  text-align: center; /* Центрируем текст названия варианта */
+  overflow: hidden; /* Обрезаем текст, если он слишком длинный */
+  white-space: nowrap; /* Предотвращаем перенос текста */
+  text-overflow: ellipsis; /* Добавляем многоточие, если текст обрезан */
+  /* Убедитесь, что здесь нет фиксированной ширины, которая может конфликтовать */
+  color: rgb(35, 98, 126);
+font-family: Inter;
+font-size: 22.4px;
+font-weight: 600;
+line-height: 27px;
+letter-spacing: 0%;
+}
+
+.product-variations h2{
+  color: rgb(18, 149, 222);
+  font-family: Inter;
+  font-size: 44.7px;
+  font-weight: 600;
+  line-height: 54px;
+  letter-spacing: 0%;
+  text-align: left;
+}
+.product-description{
+  color: rgb(101, 140, 161);
+font-family: Inter;
+font-size: 10px;
+font-weight: 300;
+line-height: 10.75px;
+letter-spacing: 0%;
+text-align: left;
+width: 245px;
+height: 22px;
+}
+
+/* Styles for variation indicator dots */
+.variation-dots {
+  display: flex;
+  justify-content: center; /* Центрируем точки */
+  align-items: center;
+  margin-top: 10px; /* Отступ сверху от названия варианта */
+  gap: 8px; /* Расстояние между точками */
+}
+
+.variation-dot {
+  display: block;
+  width: 10px; /* Размер точки */
+  height: 10px; /* Размер точки */
+  border-radius: 50%; /* Делаем круглой */
+  background-color: rgb(18, 149, 222); /* Синий цвет по умолчанию */
+  cursor: pointer; /* Курсор при наведении */
+  transition: background-color 0.3s ease; /* Плавное изменение цвета */
+}
+
+.variation-dot.active {
+  background-color: rgba(240, 157, 5, 0.897); /* Оранжевый цвет для активной точки */
 }

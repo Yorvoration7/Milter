@@ -27,6 +27,15 @@ const productImageMap = {
   '../../src/assets/images/webPics/product8.png': product8Image, // Обновленный путь
   // Добавьте остальные сопоставления с обновленными путями
 };
+import Slider from 'react-slick';
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+// Import store logos
+import store1Logo from '../../assets/images/webPics/store1.png';
+import store2Logo from '../../assets/images/webPics/store2.png';
+import store3Logo from '../../assets/images/webPics/store3.png';
+import store4Logo from '../../assets/images/webPics/store4.png';
+import store5Logo from '../../assets/images/webPics/store5.png';
 
 const translations = {
   ru: {
@@ -68,7 +77,7 @@ const ProductCarousel = ({ activeLang }) => {
   const [selectedProduct, setSelectedProduct] = useState(productsData && productsData.length > 0 ? productsData[0] : null); // Инициализируем первым продуктом по умолчанию
   // Состояние для индекса выбранного варианта продукта
   const [currentVariationIndex, setCurrentVariationIndex] = useState(0);
-
+  console.log(selectedProduct);
   // Эффект для сброса выбранного варианта при смене выбранного продукта
   useEffect(() => {
     if (selectedProduct && selectedProduct.variations && selectedProduct.variations.length > 0) {
@@ -105,17 +114,21 @@ const ProductCarousel = ({ activeLang }) => {
   // Получаем выбранный вариант продукта
   const selectedVariation = selectedProduct?.variations?.[currentVariationIndex];
 
-  // Функции для навигации по вариантам выбранного продукта
-  const nextVariation = () => {
-    if (selectedProduct?.variations && selectedProduct.variations.length > 0) {
-      setCurrentVariationIndex((prevIndex) => (prevIndex + 1) % selectedProduct.variations.length);
-    }
+  // Functions for variation navigation (modified for circular movement)
+  const prevVariation = () => {
+    setCurrentVariationIndex(prevIndex => 
+      prevIndex === 0 ? 
+      (selectedProduct?.variations?.length || 1) - 1 : 
+      prevIndex - 1
+    );
   };
 
-  const prevVariation = () => {
-    if (selectedProduct?.variations && selectedProduct.variations.length > 0) {
-      setCurrentVariationIndex((prevIndex) => (prevIndex - 1 + selectedProduct.variations.length) % selectedProduct.variations.length);
-    }
+  const nextVariation = () => {
+    setCurrentVariationIndex(prevIndex => 
+      prevIndex === (selectedProduct?.variations?.length || 1) - 1 ? 
+      0 : 
+      prevIndex + 1
+    );
   };
 
   if (!Array.isArray(products) || products.length === 0) {
@@ -152,38 +165,64 @@ const ProductCarousel = ({ activeLang }) => {
       </div>
 
       {/* Секция для отображения деталей выбранного продукта (условно рендерится) */}
+      
+      {/* Секция для отображения деталей выбранного продукта (условно рендерится) */}
+      
+      {/* Секция для отображения деталей выбранного продукта (условно рендерится) */}
+      
+      {/* Секция для отображения деталей выбранного продукта (условно рендерится) */}
+      
+      {/* Секция для отображения деталей выбранного продукта (условно рендерится) */}
       {selectedProduct && ( // Рендерим блок только если selectedProduct не null
         <section className="selected-product-details"> {/* Используем класс для стилизации */}
           <div className="product-details"> {/* Используем класс для стилизации */} 
-            {/* Изображение продукта */}
-            {/* Используем productImageMap из ProductCarousel.jsx, если импортируете изображения напрямую */}
-            {/* Отображаем изображение главного продукта, не варианта */}
-            <img src={productImageMap[selectedProduct?.image] || selectedProduct?.image} alt={selectedProduct?.name[activeLang]} style={{ maxWidth: '300px', height: 'auto' }}/> {/* Используем опциональную цепочку */}
+            {/* Изображение продукта из imageAdditional */}
+           
 
             {/* Информация о продукте и варианты */}
             <div className="product-info"> {/* Контейнер для названия, описания и т.д. */}
-              <h2>{selectedProduct?.name[activeLang]}</h2> {/* Название продукта (используем опциональную цепочку) */}
-              {selectedProduct?.description && <p>{selectedProduct.description[activeLang]}</p>} {/* Описание продукта, если есть (используем опциональную цепочку) */}
+             {/* Описание продукта, если есть (используем опциональную цепочку) */}
 
               {/* Состав продукта (если есть) */}
-              {selectedProduct?.composition && (
-                  <div className="product-composition"> {/* Добавьте класс для стилизации */}
-                      <h4>{translations[activeLang]?.compositionTitle || 'Состав:'}</h4> {/* Заголовок Состав */}
-                      <p>{selectedProduct.composition[activeLang]}</p> {/* Состав (используем опциональную цепочку) */}
-                  </div>
-              )}
+            
 
               {/* Варианты продукта и кнопки навигации по вариантам */}
+              <div className="product__main-info">
               {selectedProduct?.variations && selectedProduct.variations.length > 0 && (
                 <div className="product-variations"> {/* Контейнер для вариантов */}
-                   <h4>{translations[activeLang]?.variationsTitle || 'Варианты:'}</h4> {/* Заголовок Варианты */}
-                   {/* Кнопки для навигации по вариантам */}
+                  <h2>{selectedProduct?.name[activeLang]}</h2> {/* Название продукта (используем опциональную цепочку) */}
+                 
+                   {/* Кнопки переключения вариантов */}
                    <div className="variation-navigation">
-                      <button onClick={prevVariation} className="variation-arrow left-arrow">{translations[activeLang]?.prevVariation}</button> {/* Кнопка Предыдущий вариант */}
-                      {/* Отображение текущего выбранного варианта */}
-                      <span className="current-variation-name">{selectedVariation?.name[activeLang]}</span> {/* Название текущего варианта */}
-                      <button onClick={nextVariation} className="variation-arrow right-arrow">{translations[activeLang]?.nextVariation}</button> {/* Кнопка Следующий вариант */}
+                     <button 
+                       className="variation-arrow left-arrow" 
+                       onClick={prevVariation}
+                     >
+                       <img src={leftArrowIcon} alt="Предыдущий вариант" /> {/* Используем иконку стрелки влево */}
+                     </button>
+                     <span className="current-variation-name">{selectedVariation?.name[activeLang]}</span>
+                     <button 
+                       className="variation-arrow right-arrow" 
+                       onClick={nextVariation}
+                     >
+                       <img src={rightArrowIcon} alt="Следующий вариант" /> {/* Используем иконку стрелки вправо */}
+                     </button>
                    </div>
+                   
+                   {/* Индикатор вариантов в виде точек */}
+                   {selectedProduct?.variations && selectedProduct.variations.length > 1 && (
+                     <div className="variation-dots">
+                       {selectedProduct.variations.map((_, index) => (
+                         <span 
+                           key={index} 
+                           className={`variation-dot ${index === currentVariationIndex ? 'active' : ''}`}
+                           onClick={() => setCurrentVariationIndex(index)} // Добавляем возможность кликать по точкам
+                         ></span>
+                       ))}
+                     </div>
+                   )}
+
+                   {selectedProduct?.description && <p className='product-description'>{selectedProduct.description[activeLang]}</p>}
                 </div>
               )}
 
@@ -207,6 +246,12 @@ const ProductCarousel = ({ activeLang }) => {
                   </ul>
                 </div>
               )}
+              </div>
+               <img 
+              src={selectedProduct?.imageAdditional || productImageMap[selectedProduct?.image] || selectedProduct?.image} 
+              alt={selectedProduct?.name[activeLang]} 
+              style={{ maxWidth: '300px', height: 'auto' }}
+            />
 
             </div> {/* Конец product-info */}
 

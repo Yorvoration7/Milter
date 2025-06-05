@@ -7,6 +7,7 @@ const products = [
       en: 'Mayonnaise'
     },
     image: '../../src/assets/images/product1.png',
+    imageAdditional: '../../src/assets/images/pravonsal.jpg',
     description: {
       ru: 'Благородный вкус и изысканный аромат с точкой настоящего испанского оли экового масла',
       uz: 'Placeholder узбекское описание',
@@ -90,7 +91,8 @@ const products = [
       uz: 'Yog\'',
       en: 'Oil'
     },
-    image: '../../src/assets/images/webPics/product2.png'
+    image: '../../src/assets/images/webPics/product2.png',
+    imageAdditional: '../../src/assets/images/pravonsal.jpg',
   },
   {
     id: 3,
@@ -99,7 +101,8 @@ const products = [
       uz: 'Spredlar',
       en: 'Spreads'
     },
-   image: '../../src/assets/images/webPics/product3.png'
+   image: '../../src/assets/images/webPics/product3.png',
+   imageAdditional: '../../src/assets/images/pravonsal.jpg',
   },
   {
     id: 4,
@@ -108,7 +111,8 @@ const products = [
       uz: 'Chili souslari',
       en: 'Chili Sauces'
     },
-   image: '../../src/assets/images/webPics/product4.png'
+   image: '../../src/assets/images/webPics/product4.png',
+   imageAdditional: '../../src/assets/images/pravonsal.jpg',
   },
   {
     id: 5,
@@ -117,7 +121,8 @@ const products = [
       uz: 'Quyultirilgan sut',
       en: 'Condensed Milk'
     },
-     image: '../../src/assets/images/webPics/product5.png'
+     image: '../../src/assets/images/webPics/product5.png',
+     imageAdditional: '../../src/assets/images/pravonsal.jpg',
   },
   {
     id: 6,
@@ -126,7 +131,8 @@ const products = [
       uz: 'Varenka',
       en: 'Varenka'
     },
-   image: '../../src/assets/images/webPics/product6.png'
+   image: '../../src/assets/images/webPics/product6.png',
+   imageAdditional: '../../src/assets/images/pravonsal.png'
   },
   {
     id: 7,
@@ -135,7 +141,8 @@ const products = [
       uz: 'Desert pastasi',
       en: 'Dessert Paste'
     },
-   image: '../../src/assets/images/webPics/product7.png'
+   image: '../../src/assets/images/webPics/product7.png',
+   imageAdditional: '../../src/assets/images/pravonsal.png'
   },
   {
     id: 8,
@@ -144,7 +151,8 @@ const products = [
       uz: 'Iriska',
       en: 'Toffee'
     },
-   image: '../../src/assets/images/webPics/product8.png'
+   image: '../../src/assets/images/webPics/product8.png',
+   imageAdditional: '../../src/assets/images/pravonsal.png'
   },
 ];
 
