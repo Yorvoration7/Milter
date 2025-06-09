@@ -253,6 +253,14 @@ const ProductCarousel = ({ activeLang }) => {
               style={{ maxWidth: '300px', height: 'auto' }}
             />
 
+
+<img 
+              src={selectedProduct?.imageCont || productImageMap[selectedProduct?.imageCont] || selectedProduct?.imageCont} 
+              alt={selectedProduct?.name[activeLang]} 
+              style={{ maxWidth: '300px', height: 'auto' }}
+            />
+
+
             </div> {/* Конец product-info */}
 
           </div> {/* Конец product-details */}

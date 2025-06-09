@@ -8,6 +8,7 @@ const products = [
     },
     image: '../../src/assets/images/product1.png',
     imageAdditional: '../../src/assets/images/pravonsal.jpg',
+    imageCont:'../../src/assets/images/webPics/moynezPic.png',
     description: {
       ru: 'Благородный вкус и изысканный аромат с точкой настоящего испанского оли экового масла',
       uz: 'Placeholder узбекское описание',
